@@ -1,18 +1,18 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
 }
 def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    namespace "com.xiaomi.xms.wearable.demo"
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.xiaomi.xms.wearable.demo"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
