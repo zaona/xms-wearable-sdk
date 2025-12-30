@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     android:orientation="vertical"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <EditText
-        android:id="@+id/et_title"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="insert title here"
-        />
+        android:hint="insert title here">
 
-    <EditText
-        android:id="@+id/et_message"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="insert message here"
-        />
+        android:layout_marginTop="12dp">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:id="@+id/sendNotification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sendNotification"
-        />
+        android:layout_marginTop="16dp"
+        android:text="sendNotification" />
 
     <TextView
         android:id="@+id/status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

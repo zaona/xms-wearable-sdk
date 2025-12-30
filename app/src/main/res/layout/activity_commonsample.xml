@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.LinearLayoutCompat xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="50dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="24dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp"
         tools:context=".ui.sample.CommonSampleActivity">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonStyle"
             android:id="@+id/getConnectedDevice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="get connected device" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonStyle"
             android:id="@+id/isAppInstalled"
             android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
             android:text="get app installed" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonStyle"
             android:id="@+id/registerServiceConnectedListener"
             android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
-            android:text="register service connection listener"
-            />
+            android:text="register service connection listener" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:id="@+id/launchApp"
-            android:text="launchApp"
-            />
+            android:text="launchApp" />
 
         <TextView
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="16dp"
             android:text="text"
-            android:textSize="14sp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+    </LinearLayout>
 </ScrollView>

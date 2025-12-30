@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     android:orientation="vertical"
     >
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:id="@+id/checkPermissionGranted"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="check is permissions granted"
-        />
+        android:text="check is permissions granted" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:id="@+id/requestPermissions"
         android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
         android:layout_height="wrap_content"
         android:text="request permissions" />
 
@@ -22,7 +25,7 @@
         android:id="@+id/status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        />
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

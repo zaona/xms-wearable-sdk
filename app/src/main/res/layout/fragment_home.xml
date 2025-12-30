@@ -4,48 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="20dp"
-    android:paddingEnd="20dp"
+    android:paddingStart="24dp"
+    android:paddingTop="24dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="24dp"
     tools:context=".ui.home.HomeFragment">
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/common_demo"
-        android:text="common demo"
-        />
+        android:text="common demo" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/common_demo"
         android:id="@+id/status_subscribe_demo"
-        android:text="status subscribe demo"
-        />
+        android:text="status subscribe demo" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status_subscribe_demo"
         android:id="@+id/status_query_demo"
-        android:text="status query demo"
-        />
-    <Button
+        android:text="status query demo" />
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status_query_demo"
         android:id="@+id/permission_demo"
-        android:text="permissions demo"
-        />
+        android:text="permissions demo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

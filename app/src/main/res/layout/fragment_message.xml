@@ -1,44 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     android:orientation="vertical"
-    android:layout_margin="20dp"
     tools:context=".ui.message.MessageFragment">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputEditText"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="input message here"
-        />
+        android:layout_marginBottom="16dp">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:id="@+id/sendMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="send message"
-        />
+        android:text="send message" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:id="@+id/registerMessageListener"
         android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
         android:text="register message listener"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonStyle"
         android:id="@+id/unRegisterMessageListener"
         android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
         android:layout_height="wrap_content"
-        android:text="unregister message listener"
-        />
+        android:text="unregister message listener" />
 
     <TextView
         android:id="@+id/status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        />
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+</LinearLayout>
